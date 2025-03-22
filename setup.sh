@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd
-sudo apt install curl net-tools
+sudo apt install curl net-tools tmux
 
 # oh-my-tmux
 git clone --single-branch https://github.com/gpakosz/.tmux.git
