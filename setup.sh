@@ -1,8 +1,6 @@
 #!/bin/bash
 
 cd
-sudo apt update
-sudo apt upgrade
 sudo apt install curl net-tools
 
 # oh-my-tmux
