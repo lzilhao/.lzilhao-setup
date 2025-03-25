@@ -159,7 +159,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username_ssh}
 
 #tmux_conf_theme_status_left=' ❐ #S |'" Wi-Fi:#(ip addr show dev wlp5s0 | grep "inet[^6]" | awk '{print $2}')|"" Eth:#(ip addr show dev enp4s0 | grep "inet[^6]" | awk '{print $2}')|"" VPN:#(ip addr show dev tun0 | grep "inet[^6]" | awk '{print $2}')|"
-tmux_conf_theme_status_left=' ❐ #S |'" Wi-Fi:#(ip addr show dev wlo1 | grep "inet[^6]" | awk '{print $2}')|"" Eth:#(ip addr show dev enp4s0 | grep "inet[^6]" | awk '{print $2}')|"" VPN:#(ip addr show dev tun0 | grep "inet[^6]" | awk '{print $2}')|#(ip addr show dev tunsnx | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev ppp0 | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev tap0 | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev tailscale0 | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev CloudflareWARP | grep "inet[^6]" | awk '{print $2}')"
+tmux_conf_theme_status_left=' ❐ #S |'" Wi-Fi:#(ip addr show dev wlo1 | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev wlp0s20f3 | grep "inet[^6]" | awk '{print $2}')|"" Eth:#(ip addr show dev enp4s0 | grep "inet[^6]" | awk '{print $2}')|"" VPN:#(ip addr show dev tun0 | grep "inet[^6]" | awk '{print $2}')|#(ip addr show dev tunsnx | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev ppp0 | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev tap0 | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev tailscale0 | grep "inet[^6]" | awk '{print $2}')#(ip addr show dev CloudflareWARP | grep "inet[^6]" | awk '{print $2}')"
 tmux_conf_theme_status_right=' #{username}#{root} | #{hostname} '
 
 # status left style
@@ -266,7 +266,8 @@ tmux_conf_copy_to_os_clipboard=true
 # bind C-a send-prefix
 
 #unbind C-a prefix and set prefix2
-set -g prefix2 None
+set -g prefix2 C-s
+bind C-s send-keys C-s
 
 # move status line to top
 set -g status-position top
