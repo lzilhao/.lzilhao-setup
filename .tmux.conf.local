@@ -328,6 +328,9 @@ bind -T off F9 \
 
 bind e set-window-option synchronize-panes
 
+# Set fzf plugin for url link handling
+set -g @plugin 'wfxr/tmux-fzf-url'
+
 #run-shell ~/pkg/tmux-resurrect/resurrect.tmux
 
 # Smart pane switching with awareness of vim splits
