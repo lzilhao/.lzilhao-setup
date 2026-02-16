@@ -267,7 +267,7 @@ tmux_conf_copy_to_os_clipboard=true
 
 #unbind C-a prefix and set prefix2
 set -g prefix2 C-s
-bind C-s send-keys C-s
+#bind C-s send-keys C-s
 
 # move status line to top
 set -g status-position top
@@ -330,6 +330,10 @@ bind e set-window-option synchronize-panes
 
 # Set fzf plugin for url link handling
 set -g @plugin 'wfxr/tmux-fzf-url'
+
+# Set resurrect and continuum plugins for saving and restoring sessions
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
 
 #run-shell ~/pkg/tmux-resurrect/resurrect.tmux
 
